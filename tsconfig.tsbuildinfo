@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/data/missions.ts","./src/games/othergames.tsx","./src/games/plantgame.tsx","./src/lib/session.ts","./src/lib/voice.ts"],"version":"5.8.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/data/missions.ts","./src/data/stories.ts","./src/games/lunchboxgame.tsx","./src/games/plantgame.tsx","./src/games/rocketgame.tsx","./src/games/sounddetectivegame.tsx","./src/games/storygame.tsx","./src/lib/session.ts","./src/lib/voice.ts"],"version":"5.8.3"}
