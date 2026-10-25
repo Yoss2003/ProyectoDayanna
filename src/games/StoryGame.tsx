@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { STORIES } from "../data/stories";
+import { publicUrl } from "../lib/publicUrl";
 import type { Question, Story } from "../data/stories";
 import "./StoryGame.css";
 
@@ -416,7 +417,7 @@ export default function StoryGame({
 
               <img
                 key={`${story.id}-${sceneIndex}`}
-                src={scene.image}
+                src={publicUrl(scene.image)}
                 alt={scene.alt}
                 className="story-game__image"
                 draggable={false}

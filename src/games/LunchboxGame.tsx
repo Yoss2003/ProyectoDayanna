@@ -6,6 +6,7 @@ import {
   useDroppable
 } from "@dnd-kit/react";
 import { say } from "../lib/voice";
+import { publicUrl } from "../lib/publicUrl";
 import "./LunchboxGame.css";
 
 type ZoneId = "principal" | "colorido" | "bebida";
@@ -74,10 +75,10 @@ const emptyLayout = (): Layout => ({
 });
 
 const imageFor = (id: string) =>
-  `/lonchera/alimentos/${id}.png`;
+  publicUrl(`lonchera/alimentos/${id}.png`);
 
 const objectFor = (id: string) =>
-  `/lonchera/objetos/${id}.png`;
+  publicUrl(`lonchera/objetos/${id}.png`);
 
 const foodFor = (id: string) =>
   FOODS.find((food) => food.id === id)!;
@@ -414,7 +415,7 @@ export default function LunchboxGame({
           <div className="lbx-scene">
             <div className="lbx-board">
               <img
-                src="/lonchera/lonchera-vacia.png"
+                src={publicUrl("lonchera/lonchera-vacia.png")}
                 alt="Lonchera azul abierta, con tres compartimentos vacíos"
                 className="lbx-board__background"
                 draggable={false}

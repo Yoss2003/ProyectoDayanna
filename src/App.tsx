@@ -18,6 +18,7 @@ import {
 } from "./lib/session";
 
 import { say, stopSpeech } from "./lib/voice";
+import { publicUrl } from "./lib/publicUrl";
 
 import type { Mission, Profile } from "./types";
 
@@ -69,7 +70,7 @@ export default function App() {
   if (!profile) return (
     <div className="entry-page">
       <div className="entry-card">
-        <img src="/astronauta.png" alt="Astronauta, mascota de Exploradores Espaciales" />
+        <img src={publicUrl("astronauta.png")} alt="Astronauta, mascota de Exploradores Espaciales" />
         <div>
           <span className="eyebrow">BIENVENIDO, EXPLORADOR</span>
           <h1>¿Cómo te llamas?</h1>
@@ -96,7 +97,7 @@ export default function App() {
       {!activeMission ? <>
         <section className="hero">
           <div><span className="eyebrow">APRENDE JUGANDO</span><h1>¡Hola, {profile.name}! Tu aventura espacial comienza aquí</h1><p>Descubre planetas, supera misiones y aprende cosas increíbles.</p><button type="button" className="primary" onClick={() => document.getElementById("misiones")?.scrollIntoView({ behavior: "smooth" })}>🚀 ¡Explorar misiones!</button></div>
-          <img src="/astronauta.png" alt="Astronauta infantil, mascota de la plataforma" />
+          <img src={publicUrl("astronauta.png")} alt="Astronauta infantil, mascota de la plataforma" />
         </section>
         <section className="content" id="misiones">
           <div className="section-title"><div><span className="eyebrow">ELIGE TU AVENTURA</span><h2>Misiones espaciales</h2></div><p>⭐ {finishedCount} actividades completadas</p></div>

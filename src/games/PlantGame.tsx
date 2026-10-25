@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./PlantGame.css";
+import { publicUrl } from "../lib/publicUrl";
 
 type Choice = {
   id: string;
@@ -17,8 +18,8 @@ type Stage = {
   choices: Choice[];
 };
 
-const img = (name: string) => `/plant/${name}.png`;
-const sound = (id: string) => `/sounds/plant/${id}.wav`;
+const img = (name: string) => publicUrl(`plant/${name}.png`);
+const sound = (id: string) => publicUrl(`sounds/plant/${id}.wav`);
 
 const stages: Stage[] = [
   {

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { say } from "../lib/voice";
+import { publicUrl } from "../lib/publicUrl";
 import "./SoundDetectiveGame.css";
 
 type ZoneId = "parque" | "casa" | "calle";
@@ -23,7 +24,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "bird",
     label: "Pájaro",
     emoji: "🐦",
-    sound: "/sounds/detectives/pajaro.mp3",
+    sound: publicUrl("sounds/detectives/pajaro.mp3"),
     zone: "parque",
     description: "Los pájaros suelen escucharse en el parque."
   },
@@ -31,7 +32,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "dog",
     label: "Perro",
     emoji: "🐶",
-    sound: "/sounds/detectives/perro.mp3",
+    sound: publicUrl("sounds/detectives/perro.mp3"),
     zone: "parque",
     description: "El perro puede escucharse en el parque."
   },
@@ -39,7 +40,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "clock",
     label: "Reloj",
     emoji: "⏰",
-    sound: "/sounds/detectives/reloj.mp3",
+    sound: publicUrl("sounds/detectives/reloj.mp3"),
     zone: "casa",
     description: "El reloj suele escucharse dentro de casa."
   },
@@ -47,7 +48,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "cry",
     label: "Bebé llorando",
     emoji: "👶",
-    sound: "/sounds/detectives/llanto.mp3",
+    sound: publicUrl("sounds/detectives/llanto.mp3"),
     zone: "casa",
     description: "Ese sonido puede escucharse dentro de casa."
   },
@@ -55,7 +56,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "car",
     label: "Carro",
     emoji: "🚗",
-    sound: "/sounds/detectives/carro.mp3",
+    sound: publicUrl("sounds/detectives/carro.mp3"),
     zone: "calle",
     description: "Los carros se escuchan en la calle."
   },
@@ -63,7 +64,7 @@ const SOUND_ITEMS: SoundItem[] = [
     id: "train",
     label: "Tren",
     emoji: "🚂",
-    sound: "/sounds/detectives/tren.mp3",
+    sound: publicUrl("sounds/detectives/tren.mp3"),
     zone: "calle",
     description: "El tren se escucha cerca de la vía o la ciudad."
   }
