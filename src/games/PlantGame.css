@@ -1,0 +1,37 @@
+.plant-game { color:#24375a; }
+.plant-game__toolbar { display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:16px; }
+.plant-game__toolbar>div { display:flex; flex-direction:column; gap:5px; }
+.plant-game__toolbar strong { font-size:19px; }
+.plant-game__step-label { font-size:13px; color:#27836a; font-weight:800; }
+.plant-game__sound-toggle { border:2px solid #d5e5ff; background:#f3f7ff; color:#24538a; font-size:13px; font-weight:800; padding:11px 13px; border-radius:13px; }
+.plant-game__sound-toggle:hover { background:#e9f1ff; }
+.plant-game__progress { display:flex; gap:9px; margin-bottom:20px; }
+.plant-game__progress span { height:10px; flex:1; border-radius:99px; background:#e6edf8; }
+.plant-game__progress .completed { background:#62bf8a; }
+.plant-game__progress .current { background:#518de0; }
+.plant-game__layout { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(270px,.95fr); gap:26px; align-items:start; }
+.plant-game__visual { border:3px solid #d9eaf8; border-radius:23px; overflow:hidden; background:#e7f5ff; }
+.plant-game__visual img { display:block; width:100%; height:auto; aspect-ratio:744 / 660; object-fit:contain; }
+.plant-game__visual-footer { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:7px; padding:13px; background:#f5faff; font-size:12px; font-weight:800; color:#4a6289; }
+.plant-game__visual-footer button { border:none; background:#e6f1ff; color:#265a9b; font-size:12px; padding:8px 10px; border-radius:9px; font-weight:900; }
+.plant-game__panel { display:flex; flex-direction:column; padding:12px 0; }
+.plant-game__eyebrow { color:#3d70ab; font-size:12px; font-weight:900; letter-spacing:.8px; }
+.plant-game__panel h2 { margin:14px 0 8px; font-size:clamp(24px,2.8vw,30px); line-height:1.15; }
+.plant-game__question { font-size:18px; line-height:1.5; margin:3px 0 20px; color:#5c6b84; }
+.plant-game__choices { display:grid; gap:10px; }
+.plant-game__choice { background:#fff; color:#274974; border:2px solid #d9e7fa; border-radius:17px; min-height:66px; padding:10px 15px; display:flex; align-items:center; text-align:left; gap:14px; font-size:17px; font-weight:900; box-shadow:0 3px 0 #d9e7fa; }
+.plant-game__choice:hover { border-color:#3274d1; background:#f2f7ff; }
+.plant-game__choice:focus-visible,.plant-game__primary:focus-visible,.plant-game__hint-trigger:focus-visible,.plant-game__sound-toggle:focus-visible { outline:3px solid #edab25; outline-offset:3px; }
+.plant-game__choice-icon { font-size:29px; line-height:1.2; }
+.plant-game__choice-arrow { margin-left:auto; color:#598ac8; }
+.plant-game__hint-trigger { margin:22px auto 0; padding:10px 16px; border:1px solid #c3d8f5; background:#edf6ff; color:#3166a1; border-radius:15px; font-weight:800; }
+.plant-game__hint { margin:13px 0; background:#fff5d1; padding:15px; border-radius:12px; line-height:1.5; color:#72521b; }
+.plant-game__feedback { display:flex; flex-direction:column; gap:17px; }
+.plant-game__status { padding:14px 16px; border-radius:14px; font-weight:900; }
+.plant-game__status.success { background:#e1f7e9; color:#1a7552; }
+.plant-game__status.error { background:#fff0da; color:#995b18; }
+.plant-game__prize { background:#fff1bf; border-radius:14px; padding:18px; text-align:center; font-weight:900; font-size:19px; }
+.plant-game__primary { width:100%; background:#2c70d8; border:0; border-radius:15px; padding:16px; color:#fff; font-size:16px; font-weight:900; }
+.plant-game__primary:hover { background:#1f5ebd; }
+.plant-game__fineprint { color:#6d7b90; font-size:12px; line-height:1.55; margin:22px 0 0; }
+@media(max-width:740px){ .plant-game__layout { grid-template-columns:1fr; gap:15px; } .plant-game__visual { max-width:570px; width:100%; margin:auto; } .plant-game__panel { padding:7px 0; } .plant-game__panel h2 { margin-top:9px; } .plant-game__question { margin-bottom:13px; } }

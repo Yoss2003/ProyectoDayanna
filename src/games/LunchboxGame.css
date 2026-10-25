@@ -1,0 +1,470 @@
+
+.lbx-game {
+  color: #c9e7ff;
+  width: 100%;
+}
+
+/* CABECERA */
+
+.lbx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lbx-header strong {
+  font-size: 1.3rem;
+}
+
+.lbx-header p {
+  color: #b9cadb;
+  margin: 6px 0 0;
+}
+
+.lbx-count {
+  color: #75ecc0;
+  font-weight: 900;
+}
+
+/* PROGRESO */
+
+.lbx-progress {
+  height: 12px;
+  background: #223649;
+  border-radius: 99px;
+  margin: 18px 0 24px;
+  overflow: hidden;
+}
+
+.lbx-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #36b981,
+    #90e8a4
+  );
+  transition: width 0.2s ease;
+}
+
+/* DISTRIBUCIÓN */
+
+.lbx-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(270px, 355px);
+  gap: 22px;
+  align-items: start;
+}
+
+.lbx-scene {
+  min-width: 0;
+}
+
+/* IMAGEN DE LA LONCHERA */
+
+.lbx-board {
+  position: relative;
+  margin: 0 auto;
+  width: min(100%, 530px);
+  aspect-ratio: 590 / 706;
+  overflow: hidden;
+  border: 2px solid #2870b0;
+  border-radius: 20px;
+  background: #07315e;
+}
+
+.lbx-board__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* COMPARTIMENTOS */
+
+.lbx-zone {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  border: 2px dashed rgba(255,255,255,.75);
+  border-radius: 16px;
+  background: rgba(255,255,255,.13);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  outline-offset: 3px;
+
+  transition:
+    background .18s,
+    border-color .18s,
+    box-shadow .18s;
+}
+
+/* POSICIONES SOBRE LA IMAGEN */
+
+.lbx-zone--principal {
+  left: 9%;
+  top: 49%;
+  width: 39%;
+  height: 34%;
+}
+
+.lbx-zone--colorido {
+  left: 52%;
+  top: 49%;
+  width: 41%;
+  height: 16.5%;
+}
+
+.lbx-zone--bebida {
+  left: 52%;
+  top: 67%;
+  width: 41%;
+  height: 16%;
+}
+
+/* COMPARTIMENTO SELECCIONADO */
+
+.lbx-zone--over,
+.lbx-zone--ready:hover,
+.lbx-zone:focus-visible {
+  border-color: #ffdc67;
+  background: rgba(255,233,138,.28);
+  box-shadow: inset 0 0 0 2px #fbe58a66;
+}
+
+/* TEXTOS DE COMPARTIMENTOS */
+
+.lbx-zone__title {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  right: 7px;
+
+  font-weight: 800;
+  font-size: clamp(9px, 1.45vw, 12px);
+  color: #244261;
+  text-align: center;
+  text-shadow: 0 1px 2px white;
+  pointer-events: none;
+}
+
+.lbx-zone small {
+  max-width: 85%;
+  font-size: clamp(8px, 1.2vw, 11px);
+  text-align: center;
+  color: #34516a;
+  opacity: .85;
+  pointer-events: none;
+}
+
+/* ALIMENTOS DENTRO DE LA LONCHERA */
+
+.lbx-zone__contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  width: 94%;
+  height: 75%;
+  margin-top: 8%;
+  pointer-events: none;
+}
+
+.lbx-zone__item {
+  position: relative;
+  width: min(70%, 122px);
+  height: 95%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.lbx-zone--colorido .lbx-zone__item {
+  width: 47%;
+}
+
+.lbx-zone__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 3px #0003);
+  pointer-events: none;
+}
+
+.lbx-zone__item span {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #d94d54;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.lbx-scene__help {
+  color: #9abbd6;
+  font-size: .85rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* PANEL DE ALIMENTOS */
+
+.lbx-tray {
+  background: #102940;
+  border: 1px solid #27659a;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+.lbx-tray h3 {
+  margin: 0 0 8px;
+  font-size: 1.13rem;
+}
+
+.lbx-tray > p {
+  color: #b8d5e8;
+  line-height: 1.5;
+}
+
+.lbx-tray__grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 16px;
+}
+
+/* TARJETAS DE ALIMENTOS */
+
+.lbx-food {
+  touch-action: none;
+  cursor: grab;
+
+  border: 2px solid #3a719e;
+  border-radius: 14px;
+  background: #fdf3df;
+  color: #173b62;
+
+  min-height: 116px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 5px;
+  font: inherit;
+  font-weight: 800;
+  gap: 6px;
+
+  transition:
+    border-color .15s,
+    background .15s,
+    transform .15s;
+}
+
+.lbx-food:hover {
+  border-color: #e6b747;
+  background: #fff9ed;
+}
+
+.lbx-food--chosen {
+  border-color: #e9a923;
+  background: #fff0c6;
+  transform: translateY(-3px);
+}
+
+.lbx-food--dragging {
+  opacity: .65;
+  cursor: grabbing;
+}
+
+.lbx-food img {
+  width: 80px;
+  max-width: 100%;
+  height: 75px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.lbx-food span {
+  font-size: .83rem;
+  text-align: center;
+}
+
+/* RETROALIMENTACIÓN */
+
+.lbx-feedback {
+  margin-top: 20px;
+  padding: 15px 18px;
+  border: 1px solid #2b6598;
+  background: #15344c;
+  border-radius: 15px;
+  line-height: 1.5;
+}
+
+.lbx-feedback p {
+  margin: 3px 0 0;
+}
+
+.lbx-feedback--hint {
+  background: #4a3615;
+  border-color: #ba8a31;
+  color: #ffdc94;
+}
+
+.lbx-feedback--success {
+  background: #164737;
+  border-color: #3eb988;
+  color: #d9ffe9;
+}
+
+.lbx-feedback button {
+  margin-top: 10px;
+  border: 1px solid #ffdc94;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* BOTONES */
+
+.lbx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.lbx-actions button {
+  border: none;
+  padding: 15px 18px;
+  border-radius: 13px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.lbx-verify {
+  background: #29b77a;
+  color: #072c22;
+  flex: 2;
+}
+
+.lbx-reset {
+  background: #23578a;
+  color: white;
+  flex: 1;
+}
+
+.lbx-note {
+  font-size: .8rem;
+  color: #a7bfd0;
+  line-height: 1.5;
+}
+
+/* TABLETS */
+
+@media (max-width: 880px) {
+  .lbx-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lbx-tray__grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 520px) {
+  .lbx-tray__grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .lbx-food {
+    min-height: 98px;
+  }
+
+  .lbx-food img {
+    height: 60px;
+  }
+
+  .lbx-zone {
+    border-radius: 9px;
+  }
+
+  .lbx-zone__title {
+    font-size: 9px;
+  }
+
+  .lbx-zone small {
+    display: none;
+  }
+
+  .lbx-zone__item span {
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lbx-game *,
+  .lbx-game *::before,
+  .lbx-game *::after {
+    transition: none !important;
+  }
+}
+
+
+/* ALIMENTOS COMO OBJETOS DENTRO DE LA LONCHERA */
+
+.lbx-zone__item {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.lbx-zone__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 5px 3px rgba(40, 25, 15, 0.22)
+  );
+
+  pointer-events: none;
+}
+
+.lbx-zone__item:disabled {
+  opacity: 1;
+}

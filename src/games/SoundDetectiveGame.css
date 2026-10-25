@@ -1,0 +1,248 @@
+.sound-game {
+  color: #b7dcff;
+  font-family: inherit;
+}
+
+.sound-game__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.sound-game__header strong {
+  font-size: 1.2rem;
+}
+
+.sound-game__header p {
+  margin: 6px 0 0;
+  color: #d8c7b4;
+}
+
+.sound-game__toggle {
+  border: 2px solid #1f63ad;
+  background: #132434;
+  color: #93c6ff;
+  border-radius: 16px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.sound-game__progress {
+  height: 12px;
+  margin: 18px 0 24px;
+  border-radius: 99px;
+  background: #22374a;
+  overflow: hidden;
+}
+
+.sound-game__progress span {
+  display: block;
+  height: 100%;
+  background: #3db97b;
+  transition: width 0.25s ease;
+}
+
+.sound-game__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.sound-panel,
+.sound-options,
+.sound-map,
+.sound-tray,
+.sound-complete {
+  border: 1px solid #215d97;
+  background: #0d2741;
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.sound-panel__illustration {
+  min-height: 260px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #123966, #0d2340);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+.sound-panel__big-icon {
+  font-size: 72px;
+  margin-bottom: 12px;
+}
+
+.sound-panel__play,
+.sound-options__next {
+  width: 100%;
+  border: none;
+  background: #2a69bd;
+  color: white;
+  border-radius: 16px;
+  padding: 14px 18px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.sound-panel__play {
+  margin-bottom: 16px;
+}
+
+.sound-panel__feedback {
+  background: #173853;
+  border-radius: 16px;
+  padding: 14px;
+  min-height: 72px;
+  line-height: 1.5;
+}
+
+.sound-options__step {
+  margin: 0 0 8px;
+  color: #7de6c0;
+  font-weight: 700;
+}
+
+.sound-options h3,
+.sound-map h3,
+.sound-tray h3,
+.sound-complete h3 {
+  margin-top: 0;
+}
+
+.sound-options__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.sound-card {
+  border: 2px solid #1e64af;
+  background: #111d28;
+  color: #cfe6ff;
+  border-radius: 18px;
+  min-height: 92px;
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: inherit;
+  text-align: left;
+}
+
+.sound-card__emoji {
+  font-size: 36px;
+  min-width: 46px;
+  text-align: center;
+}
+
+.sound-card--active {
+  background: #1c3e63;
+  border-color: #7fb9ff;
+}
+
+.sound-map p,
+.sound-tray p {
+  color: #cbd9e5;
+}
+
+.sound-map__zones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.sound-zone {
+  border: 2px solid #235f96;
+  background: #10263e;
+  border-radius: 18px;
+  padding: 16px;
+  color: #d2e8ff;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.sound-zone__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sound-zone__title span {
+  font-size: 28px;
+}
+
+.sound-zone__stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.sound-tray__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.sound-sticker {
+  border: 2px solid #2361a3;
+  background: #16324d;
+  color: #d8ecff;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.sound-sticker--selected {
+  background: #295684;
+  border-color: #ffde7c;
+}
+
+.sound-sticker--placed {
+  background: #214767;
+  cursor: default;
+}
+
+.sound-tray__empty {
+  padding: 14px;
+  border-radius: 14px;
+  background: #173853;
+  width: 100%;
+}
+
+.sound-complete__summary {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.sound-complete__zone {
+  background: #16324d;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+@media (max-width: 860px) {
+  .sound-game__layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,342 @@
+
+.story-game {
+  color: #d2eaff;
+  max-width: 1100px;
+  margin: auto;
+  font-family: inherit;
+}
+
+.story-game__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.story-game__header strong {
+  font-size: 1.2rem;
+}
+
+.story-game__header p {
+  color: #b9c9db;
+  margin: 6px 0 0;
+}
+
+.story-game__sound,
+.story-game__secondary,
+.story-game__hint button {
+  color: #a9d9ff;
+  background: #172d44;
+  border: 1px solid #356d9b;
+  padding: 12px 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.story-game__sound:disabled,
+.story-game__secondary:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.story-game__primary {
+  background: #286cce;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 21px;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.story-game__primary:hover {
+  background: #327ee7;
+}
+
+/* PANTALLA INICIAL Y VICTORIA */
+
+.story-game__welcome,
+.story-game__finish {
+  border: 1px solid #24639b;
+  border-radius: 24px;
+  background: linear-gradient(140deg, #112d51, #101c34);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.story-game__welcome-art,
+.story-game__trophy {
+  font-size: clamp(70px, 11vw, 100px);
+}
+
+.story-game__welcome p,
+.story-game__finish p {
+  max-width: 630px;
+  margin: 12px auto 22px;
+  line-height: 1.7;
+  color: #c6def4;
+}
+
+.story-game__welcome small {
+  display: block;
+  margin-top: 19px;
+  color: #accde6;
+}
+
+/* TÍTULOS Y PROGRESO */
+
+.story-game__heading {
+  margin-bottom: 14px;
+}
+
+.story-game__heading h2 {
+  margin: 7px 0;
+  color: #f0f8ff;
+}
+
+.story-game__heading p {
+  color: #8addb8;
+  margin: 0;
+}
+
+.story-game__eyebrow {
+  color: #78e1b7;
+  font-weight: 800;
+  font-size: .88rem;
+}
+
+.story-game__progress {
+  display: flex;
+  gap: 9px;
+  margin: 16px 0 22px;
+}
+
+.story-game__progress span {
+  flex: 1;
+  height: 10px;
+  border-radius: 20px;
+  background: #253a51;
+}
+
+.story-game__progress span.active {
+  background: #3eb98b;
+}
+
+/* ESCENAS */
+
+.story-game__scene {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+.story-game__art {
+  position: relative;
+  min-height: 320px;
+  border: 2px solid #275c95;
+  border-radius: 23px;
+  background:
+    radial-gradient(
+      circle at 83% 18%,
+      #ffdb8477 0 30px,
+      transparent 31px
+    ),
+    radial-gradient(
+      circle at 16% 25%,
+      #ffffff90 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 70% 61%,
+      #ffffffa0 0 2px,
+      transparent 3px
+    ),
+    linear-gradient(150deg, #134676, #192445);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.story-game__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-game__narration {
+  border: 1px solid #285a87;
+  border-radius: 22px;
+  background: #122c46;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-game__narration h3 {
+  font-size: 1.45rem;
+  color: #eef7ff;
+}
+
+.story-game__narration p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: #d3e5f2;
+}
+
+.story-game__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* PREGUNTAS */
+
+.story-game__quiz {
+  max-width: 790px;
+  margin: auto;
+  text-align: center;
+}
+
+.story-game__quiz-symbol {
+  font-size: 62px;
+  margin-bottom: 6px;
+}
+
+.story-game__quiz h2 {
+  margin: 14px 0 18px;
+}
+
+.story-game__choices {
+  display: grid;
+  gap: 11px;
+  margin: 23px auto 14px;
+}
+
+.story-game__choices button {
+  background: #152f4b;
+  border: 2px solid #2f6ca3;
+  border-radius: 16px;
+  color: #e4f2ff;
+  padding: 17px 20px;
+  min-height: 62px;
+  text-align: left;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.story-game__choices button:hover:not(:disabled) {
+  border-color: #ffd574;
+  background: #1c4163;
+}
+
+.story-game__choices button.correct {
+  background: #174b39;
+  border-color: #45c68f;
+}
+
+.story-game__choices button:disabled {
+  cursor: default;
+  opacity: .85;
+}
+
+/* PISTAS */
+
+.story-game__hint {
+  margin: 15px 0;
+}
+
+.story-game__hint p {
+  padding: 14px;
+  border-radius: 12px;
+  background: #4e3c17;
+  color: #ffe0a0;
+}
+
+.story-game__feedback {
+  min-height: 22px;
+  color: #ffd69f;
+}
+
+.story-game__feedback.success {
+  color: #73e7a8;
+}
+
+/* PANTALLA FINAL */
+
+.story-game__finish {
+  max-width: 680px;
+  margin: auto;
+}
+
+/* CELULARES */
+
+@media (max-width: 760px) {
+  .story-game__scene {
+    grid-template-columns: 1fr;
+  }
+
+  .story-game__art {
+    min-height: 250px;
+  }
+
+  .story-game__narration {
+    padding: 19px;
+  }
+
+  .story-game__controls button {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-game * {
+    transition: none !important;
+  }
+}
+
+
+/* ==================================
+   IMÁGENES DE LAS HISTORIAS
+================================== */
+
+.story-game__art {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+
+  border-radius: 22px;
+  border: 2px solid #275c95;
+
+  background: #112b48;
+}
+
+.story-game__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+
+  border-radius: 20px;
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 760px) {
+  .story-game__image {
+    width: 100%;
+    height: auto;
+  }
+}
